@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
         genreData[genreKey].forEach(gameTitle => {
             const item = document.createElement('div');
             item.className = 'game-item-box';
-            item.innerHTML = `<span class="icon">🎮</span> <span>${gameTitle}</span>`;
+            item.innerHTML = `<span class="icon"></span> <span>${gameTitle}</span>`;
             detailList.appendChild(item);
         });
 
