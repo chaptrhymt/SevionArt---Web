@@ -1288,114 +1288,171 @@ body {
 }
 
 /* ============================================================
-   08. RESPONSIVE MEDIA QUERIES (TABLET & MOBILE)
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   Untuk Tablet & Layar Menengah (< 992px)
    ============================================================ */
+@media screen and (max-width: 992px) {
+    .section {
+        padding: 100px 40px 50px;
+    }
+    
+    .grid-2col {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .platform-container {
+        grid-template-columns: 1fr; /* Sidebar platform jadi di atas konten */
+    }
+    
+    .platform-tabs {
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        white-space: nowrap;
+    }
+    
+    /* Sembunyikan scrollbar pada tab platform */
+    .platform-tabs::-webkit-scrollbar {
+        height: 4px;
+    }
+    .platform-tabs::-webkit-scrollbar-thumb {
+        background: var(--border-color);
+        border-radius: 2px;
+    }
 
-/* Untuk Tablet & Laptop Kecil (Max 1024px) */
-@media (max-width: 1024px) {
-    .section { padding: 100px 40px 40px; }
-    .grid-2col { gap: 30px; }
-    .platform-container { grid-template-columns: 200px 1fr; gap: 20px; }
+    .genre-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-/* Untuk Layar Tablet (Max 768px) */
-@media (max-width: 768px) {
-    /* Navbar: Jadikan menu bisa di-scroll ke samping (horizontal) */
+/* ============================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   Untuk Handphone / Layar Kecil (< 768px)
+   ============================================================ */
+@media screen and (max-width: 768px) {
+    /* Navbar Adjustment */
     .navbar {
         flex-direction: column;
         padding: 15px 20px;
         gap: 15px;
     }
+    
     .navbar nav {
         display: flex;
+        overflow-x: auto; /* Memungkinkan menu digeser ke samping di HP */
         width: 100%;
-        overflow-x: auto;
         padding-bottom: 5px;
-        scroll-snap-type: x mandatory;
+        justify-content: flex-start;
     }
-    .navbar nav::-webkit-scrollbar { height: 3px; }
-    .navbar nav::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 5px;}
+    
+    .navbar nav::-webkit-scrollbar {
+        display: none; /* Sembunyikan scrollbar agar rapi */
+    }
+    
     .navbar nav a {
-        margin-left: 0;
-        margin-right: 20px;
+        margin-left: 15px;
         white-space: nowrap;
     }
 
-    /* Penyesuaian Teks & Spacing */
-    .section { padding: 90px 20px 40px; }
-    .hero-title { font-size: 2.2rem; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .grid-2col { grid-template-columns: 1fr; }
-
-    /* Timeline (Story): Ubah jadi satu jalur lurus ke bawah */
-    .timeline-line { left: 15px; transform: none; }
-    .timeline-item { 
-        flex-direction: column; 
-        align-items: flex-start; 
-        padding-left: 45px; 
-        margin-bottom: 50px;
+    /* Section & Typography */
+    .section {
+        padding: 80px 20px 40px;
     }
-    .timeline-content, .timeline-media { width: 100%; }
-    .timeline-node { 
-        left: 15px; 
-        transform: translateX(-5px) rotate(45deg); 
+    
+    .hero-title {
+        font-size: 2.2rem;
     }
-    .timeline-item.right .timeline-media { order: 2; margin-top: 15px; }
-    .timeline-item.right .timeline-content { order: 1; }
-    .timeline-item.left .timeline-media { margin-top: 15px; }
-
-    /* Platform: Tombol ditumpuk di atas konten */
-    .platform-container { grid-template-columns: 1fr; }
-    .platform-tabs { 
-        flex-direction: row; 
-        flex-wrap: wrap; 
-        justify-content: center; 
+    
+    .hero-description {
+        font-size: 0.85rem;
     }
-    .tab-btn { 
-        flex: 1 1 calc(33.333% - 10px); 
-        justify-content: center; 
-        padding: 10px; 
-        text-align: center;
+    
+    /* Stats Grid */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        border-bottom: none;
     }
-    .tab-btn .tab-arrow { display: none; }
-    .game-cards-grid { grid-template-columns: repeat(2, 1fr); }
-
-    /* Genre & Detail Game */
-    .genre-grid { grid-template-columns: repeat(2, 1fr); }
-    .detail-games-list { grid-template-columns: repeat(2, 1fr); }
-
-    /* Footer & Komunitas */
+    .stat-box {
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    /* Timeline Fixes untuk Mobile */
+    .timeline {
+        margin: 20px 0 0 15px;
+    }
+    
+    .timeline-line {
+        left: 0;
+        transform: none;
+    }
+    
+    .timeline-node {
+        left: 0;
+        top: 25px;
+        transform: translateX(-50%) rotate(45deg);
+    }
+    
+    .timeline-item {
+        flex-direction: column !important; /* Paksa tumpuk ke bawah */
+        padding-left: 30px;
+        margin-bottom: 40px;
+        align-items: flex-start;
+    }
+    
+    .timeline-content, .timeline-media {
+        width: 100%;
+    }
+    
+    /* Menumpuk Game Card & Genre */
+    .game-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .genre-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .detail-games-list {
+        grid-template-columns: 1fr;
+    }
+    
+    /* News & Banner */
+    .news-header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .news-card {
+        width: 280px; /* Perkecil ukuran card berita di HP */
+    }
+    
     .community-banner {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 25px;
-    }
-    .community-links { justify-content: flex-start; }
-    .footer-top {
-        flex-direction: column;
-        gap: 25px;
-        align-items: flex-start;
-    }
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
-        align-items: flex-start;
+        padding: 25px 20px;
     }
 }
 
-/* Untuk Layar HP Biasa & Kecil (Max 480px) */
-@media (max-width: 480px) {
-    .hero-title { font-size: 1.8rem; }
-    .hero-buttons { flex-direction: column; width: 100%; }
-    .hero-buttons .btn { text-align: center; }
+/* ============================================================
+   RESPONSIVE DESIGN (MEDIA QUERIES)
+   Untuk Handphone Sangat Kecil (< 480px)
+   ============================================================ */
+@media screen and (max-width: 480px) {
+    .stats-grid {
+        grid-template-columns: 1fr; /* Jadi 1 kolom full */
+    }
     
-    .stats-grid { grid-template-columns: 1fr; }
-    .tab-btn { flex: 1 1 100%; }
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
     
-    .game-cards-grid { grid-template-columns: 1fr; }
-    .genre-grid { grid-template-columns: 1fr; }
-    .detail-games-list { grid-template-columns: 1fr; }
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
     
-    /* Sesuaikan lebar kartu berita agar pas di slider layar HP */
-    .news-card { width: 85vw; }
+    .footer-logo {
+        font-size: 1.8rem;
+    }
 }
