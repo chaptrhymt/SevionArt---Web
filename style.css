@@ -17,7 +17,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-
+    user-select: none;
 }
 
 body {
@@ -1439,6 +1439,33 @@ background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.
     .community-banner {
         padding: 25px 20px;
     }
+
+    /* Perbaikan Banner Komunitas di Mobile */
+    .community-banner {
+        flex-direction: column; /* Mengubah susunan menjadi atas-bawah */
+        align-items: center;
+        text-align: center; /* Membuat teks jadi ke tengah */
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .community-info {
+        max-width: 100%;
+    }
+
+    .community-links {
+        width: 100%; /* Mengambil lebar penuh */
+        flex-direction: column; /* Menyusun tombol berjejer ke bawah */
+        gap: 12px;
+    }
+
+    .comm-btn {
+        width: 100%; /* Tombol memanjang memenuhi layar */
+        justify-content: center; /* Posisi ikon dan teks di tengah */
+        padding: 12px;
+        font-size: 0.75rem;
+    }
+
 }
 
 /* ============================================================
