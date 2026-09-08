@@ -9,6 +9,7 @@
     --text-muted: #94a3b8;
     --font-heading: 'Orbitron', sans-serif;
     --font-body: 'Inter', sans-serif;
+    
 }
 
 * {
@@ -16,6 +17,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+
 }
 
 body {
@@ -23,6 +25,8 @@ body {
     color: var(--text-main);
     font-family: var(--font-body);
     overflow-x: hidden;
+background-color: #010008;
+background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
 }
 
 /* NAVBAR */
@@ -185,16 +189,6 @@ body {
     opacity: 0.4;
 }
 
-.file-name {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    font-size: 0.65rem;
-    font-family: monospace;
-    color: var(--text-muted);
-}
-
-
 /* STATS GRID */
 .stats-grid {
     display: grid;
@@ -208,7 +202,7 @@ body {
 .stat-box {
     padding: 25px;
     border-right: 1px solid var(--border-color);
-    text-align: left;
+    text-align: center;
 }
 
 .stat-box:last-child { border-right: none; }
@@ -1135,27 +1129,39 @@ body {
     line-height: 1.6;
 }
 
+/* Mengatur kontainer agar penuh, rata kanan, menyusun ke bawah, dan memberi jarak antar tombol */
 .community-links {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    max-width: 420px;
-    justify-content: flex-end;
+    flex-direction: column; /* Menyusun ke bawah */
+    align-items: flex-end;  /* Rata kanan */
+    width: 100%;            /* Layout kolom full ke kanan */
+    gap: 12px;              /* Jarak antar tombol */
 }
 
+/* Memastikan semua ukuran layout tombol sama dan konsisten */
 .comm-btn {
+    width: 200px;           /* Ukuran lebar tombol dibuat sama */
+    height: 48px;           /* Ukuran tinggi tombol dibuat sama */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid var(--border-color);
     color: var(--text-main);
     text-decoration: none;
-    padding: 8px 14px;
     font-family: var(--font-heading);
-    font-size: 0.65rem;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    font-size: 0.75rem;
+    border-radius: 6px;
     transition: all 0.3s ease;
+}
+
+/* Mengatur ukuran ikon di dalam tombol agar seragam */
+.comm-btn .my-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }
 
 .comm-btn:hover {
@@ -1266,6 +1272,8 @@ body {
     background: var(--cyan);
     color: #000;
 }
+
+
 
 /* Responsive Footer & News */
 @media (max-width: 992px) {

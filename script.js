@@ -112,42 +112,115 @@ const genreData = {
     action: [
         "Grand Theft Auto V",
         "Devil May Cry 5",
-        "DOOM Eternal"
+        "DOOM Eternal",
+        "Hades II",
+        "Bayonetta 3",
+        "Sekiro: Shadows Die Twice",
+        "Metal Gear Rising: Revengeance",
+        "Stellar Blade",
+        "God of War Ragnarok",
+        "Warframe",
+        "Read Dead Redemption",
+        "Uncharted 2: Among Thiefes"
+        
     ],
     adventure: [
-        "Uncharted 4",
+        "The Legend of Zelda: Tears of the Kingdom",
         "Tomb Raider",
-        "It Takes Two"
+        "It Takes Two",
+        "Assassin’s Creed Valhalla",
+        "Subnautica",
+        "Tomb Raider",
+        "Indiana Jones and the Great Circle",
+        "Horizon Zero Dawn", 
+        "Ghost Of Tsushima",
+        "The Walking Dead",
+        "The Elder Scrolls V: Skyrim",
+        "Stray "
     ],
     rpg: [
         "The Witcher 3",
         "Elden Ring",
-        "Persona 5"
+        "Persona 5",
+        "Final Fantasy VI" ,
+        "Clair Obscur: Expedition 33 ",
+        "Cyberpunk 2077 ",
+        "Undertale",
+        "Dark Souls III",
+        "Honkai: Star Rail",
+        "NieR: Automata",
+        "Star Wars: Knights of the Old Republic",
+        "Chrono Trigger "
     ],
     strategy: [
         "Civilization VI",
         "StarCraft II",
-        "Age of Empires IV"
+        "Age of Empires IV",
+        "Plants vs. Zombies " ,
+        "Warcraft III",
+        "Stellaris",
+        "Crusader Kings III",
+        "Stellaris",
+        "Europa Universalis IV",
+        "Company of Heroes 3",
+        "Frostpunk ",
+        "XCOM 2 "
     ],
     simulation: [
         "The Sims 4",
         "Cities: Skylines",
-        "Stardew Valley"
+        "Stardew Valley",
+        "House Flipper" ,
+        "Car Mechanic Simulator",
+        "Leaf it Alone",
+        "Football Manager ",
+        "Thief Simulator",
+        "Cooking Simulator",
+        "Animal Crossing: New Horizons",
+        "Bus Simulator ",
+        "Planet Zoo"
     ],
     sports: [
         "EA FC 25",
         "NBA 2K25",
-        "Rocket League"
+        "Rocket League",
+        "eFootball" ,
+        "WWE 2K26 ",
+        "F1 25 ",
+        "Rocket League",
+        "Tennis World Tour 2 ",
+        "PGA Tour 2K25 ",
+        "NHL 26",
+        "Descenders",
+        "Riders Republic"
     ],
     horror: [
         "Resident Evil 4",
         "Outlast",
-        "Dead Space"
+        "Dead Space",
+        "Amnesia: The Dark Descent" ,
+        "Five Nights at Freddy’s",
+        "Phasmophobia",
+        "Silent Hill 2 Remake",
+        "The Forest",
+        "SOMA ",
+        "Alan Wake 2 ",
+        "Pamali: Indonesian Folklore Horror",
+        "DreadOut"
     ],
     puzzle: [
         "Portal 2",
         "Tetris Effect",
-        "Monument Valley"
+        "Monument Valley",
+        "It Takes Two" ,
+        "Human: Fall Flat",
+        "Return of the Obra Dinn",
+        "Antichamber ",
+        "Superliminal ",
+        "Unpacking ",
+        "Gorogoa ",
+        "Escape Simulator",
+        "Baba Is You"
     ]
 };
 
